@@ -1,0 +1,27 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Nanum Gothic", sans-serif;
+
+  .catchphrase {
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    top: 150px;
+    img {
+      width: 30px;
+    }
+  }
+
+  .search {
+    input {
+      padding: 4px 0px;
+    }
+    button {
+      margin: 0 10px;
+    }
+  }
+}
