@@ -1,27 +1,91 @@
 .home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: "Nanum Gothic", sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Nanum Gothic', sans-serif;
 
-  .catchphrase {
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    top: 150px;
-    img {
-      width: 30px;
-    }
-  }
+	.catchphrase {
+		text-align: center;
+		padding: 10px 0;
+		position: absolute;
+		top: 150px;
+		img {
+			width: 30px;
+		}
+	}
 
-  .search {
-    input {
-      padding: 4px 0px;
-    }
-    button {
-      margin: 0 10px;
-    }
-  }
+	.search {
+		text-align: center;
+		input {
+			padding: 4px 0px;
+		}
+		button {
+			margin: 0 10px;
+		}
+	}
+}
+
+.search-modal-dialog {
+	font-family: 'Nanum Gothic', sans-serif;
+	max-width: 80vw;
+
+	.search-modal-content {
+		min-height: 300px;
+		text-align: center;
+		overflow-y: hidden;
+
+		.drug-modal-body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.drug {
+				display: flex;
+				align-items: center;
+				margin: 15px 0px;
+				padding: 10px 10px;
+
+				.title {
+					width: 80%;
+					margin: 0 0 0 10px;
+					vertical-align: middle;
+					overflow: hidden;
+				}
+			}
+		}
+
+		.drug-detail-modal-body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			.name,
+			.warning,
+			.effect {
+				height: 100%;
+				display: flex;
+				flex-direction: flex;
+				align-items: center;
+				padding: 5% 0;
+				.left {
+					width: 40%;
+					font-size: 1.2rem;
+				}
+				.right {
+					width: 80%;
+					text-align: left;
+				}
+			}
+			.name {
+				img {
+					margin-right: 20px;
+				}
+			}
+		}
+
+		.thumbnail {
+			width: 60px;
+			height: 60px;
+		}
+	}
 }
