@@ -1,0 +1,34 @@
+* {
+	font-family: 'Jua', sans-serif;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	.pill {
+		color: #ec7272;
+	}
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+}
+
+input {
+	width: 250px;
+	height: 35px;
+	margin: 10px 0;
+	border-radius: 10px;
+	border: 1px solid gray;
+}

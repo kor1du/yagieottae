@@ -12,7 +12,6 @@ const DrugDetailModal: React.FC<DrugDetailModalProps> = ({ drug, showProp, setSh
 	const handleClose = () => setShowProp(false);
 
 	useEffect(() => {}, [showProp]);
-	console.log({ drug });
 	return (
 		<>
 			<Modal show={showProp} onHide={handleClose} centered dialogClassName="search-modal-dialog" contentClassName="search-modal-content">

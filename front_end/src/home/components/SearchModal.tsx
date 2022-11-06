@@ -1,7 +1,6 @@
 import { Modal } from 'react-bootstrap';
-import { useEffect, Dispatch, useState } from 'react';
+import { useEffect, Dispatch } from 'react';
 import Drug, { DrugInterface } from './Drug';
-import DrugDetailModal from './DrugDetailModal';
 
 interface SearchModalProps {
 	showProp: boolean;

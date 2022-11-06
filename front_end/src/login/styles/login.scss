@@ -1,0 +1,35 @@
+.login {
+	position: relative;
+	top: 80px;
+	height: calc(100vh - 80px);
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Jua', sans-serif;
+
+	.emoji {
+		width: 20px;
+		height: 20px;
+	}
+	.login-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.1);
+		color: black;
+		width: 300px;
+		height: 350px;
+
+		input {
+			width: 250px;
+			height: 35px;
+			margin: 10px 0;
+		}
+
+		.btn {
+			margin-top: 20px;
+		}
+	}
+}
