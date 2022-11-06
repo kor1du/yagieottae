@@ -3,6 +3,7 @@ import NoImage from '../../common/images/No_image_available.svg';
 import DrugDetailModal from './DrugDetailModal';
 
 export interface DrugInterface {
+	id?: string;
 	entpName: string;
 	itemName: string;
 	itemSeq: string;

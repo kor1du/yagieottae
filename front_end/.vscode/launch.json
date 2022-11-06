@@ -9,16 +9,7 @@
 			"request": "launch",
 			"name": "Launch Chrome against localhost",
 			"url": "http://localhost:3000",
-			"webRoot": "${workspaceFolder}"
-		},
-		{
-			"name": "SWA: Run front_end",
-			"request": "launch",
-			"type": "pwa-chrome",
-			"url": "http://localhost:4280",
-			"preLaunchTask": "swa: start front_end",
-			"webRoot": "${workspaceFolder}/",
-			"timeout": 30000
+			"webRoot": "${workspaceFolder}/src"
 		}
 	]
 }

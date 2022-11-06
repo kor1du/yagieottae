@@ -21,7 +21,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ showProp, setShowProp, drugsD
 				</Modal.Header>
 				<Modal.Body className="drug-modal-body">
 					{drugsData.map((drug) => {
-						return <Drug drug={drug}></Drug>;
+						return <Drug key={drug.id} drug={drug}></Drug>;
 					})}
 				</Modal.Body>
 			</Modal>

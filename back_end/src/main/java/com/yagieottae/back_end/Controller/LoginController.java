@@ -17,7 +17,8 @@ public class LoginController {
 
     @PostMapping("/")
     @ResponseBody
-    public boolean login(@RequestBody UserDTO userDTO){
+    public String login(@RequestBody UserDTO userDTO){
+        String check=loginService.login(userDTO);
         return loginService.login(userDTO);
     }
 }

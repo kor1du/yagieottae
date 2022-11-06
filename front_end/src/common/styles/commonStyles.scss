@@ -7,12 +7,21 @@
 	h5,
 	h6 {
 		margin: 0;
-		display: flex;
-		align-items: center;
+		text-align: center;
+		vertical-align: middle;
 	}
 }
 
+input {
+	width: 250px;
+	height: 35px;
+	margin: 10px 0;
+	border-radius: 10px;
+	border: 1px solid gray;
+}
+
 .logo {
+	background-color: transparent;
 	display: flex;
 	align-items: center;
 	.pill {
@@ -25,10 +34,29 @@
 	height: 20px;
 }
 
-input {
-	width: 250px;
-	height: 35px;
-	margin: 10px 0;
+.greeting {
+	text-align: left;
+	width: 100%;
+	margin-bottom: 10px;
+	.logo {
+		margin-bottom: 5px;
+	}
+}
+
+.login,
+.signup {
+	background-color: #253ea2;
+}
+
+.login-container,
+.signup-container {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 320px;
+	height: 400px;
 	border-radius: 10px;
-	border: 1px solid gray;
+	padding: 0 20px;
 }

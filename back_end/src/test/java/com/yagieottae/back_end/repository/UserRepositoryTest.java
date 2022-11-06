@@ -18,19 +18,30 @@ public class UserRepositoryTest {
 
     @Test
     @Rollback(false)
-    public void insert() throws Exception{
-        UserDTO userDTO=UserDTO.builder()
-                        .userID("user")
-                                .userPW("password")
-                                        .build();
-        userRepository.signup();
+    public void signup() throws Exception {
+        UserDTO userDTO = UserDTO.builder()
+                .userID("user1")
+                .userPW("password1")
+                .build();
+        userRepository.signup(userDTO);
     }
 
     @Test
     @Rollback(false)
     public void find() throws Exception {
-       User user= userRepository.findUserByID("user");
+        User user = userRepository.findUserByID("user");
+        System.out.println(user.getUserID());
+    }
 
-        System.out.println(user.toString());
+    @Test
+    @Rollback(false)
+    public void deleteAll() throws Exception{
+        userRepository.deleteAll();
+    }
+
+    @Test
+    @Rollback(false)
+    public void initAutoIncrement() throws Exception{
+        userRepository.initAutoIncrement(1);
     }
 }

@@ -17,7 +17,7 @@ import { DrugInterface } from './components/Drug';
  */
 function searchDrug(drugName: String, setDrugsData: Dispatch<DrugInterface[]>, setShowModal: Dispatch<boolean>, setLoadingModal: Dispatch<boolean>): void {
 	const url: string =
-		'https://cors-anywhere.herokuapp.com/http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList?serviceKey=uwUE6B91FWNN6KSuMDrr6xivcPn%2FUbSqjqRVtGCi%2BdHn%2Bh33FlgV%2BB9d81JnEa8RfrC6WkzmGQZf5GJ83spcqQ%3D%3D&itemName=' +
+		'http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList?serviceKey=uwUE6B91FWNN6KSuMDrr6xivcPn%2FUbSqjqRVtGCi%2BdHn%2Bh33FlgV%2BB9d81JnEa8RfrC6WkzmGQZf5GJ83spcqQ%3D%3D&itemName=' +
 		drugName; //API주소
 
 	setAxiosLoadingInterceptor(setLoadingModal); //Axios로 데이터를 받아올때 로딩창 출력
@@ -27,9 +27,10 @@ function searchDrug(drugName: String, setDrugsData: Dispatch<DrugInterface[]>, s
 		//axios로 API 호출
 		const xmlParser = new DOMParser(); //API에서 받아온 XML데이터를 파싱하기 위해 DOMParser 생성
 		const data: any = xmlParser.parseFromString(result.data, 'text/xml').querySelectorAll('items item'); //DOMParser를 이용해 받아온 XML데이터 파싱후 item만 저장
-		data.forEach((ele: any, index: any) => {
+		data.forEach((ele: any, index: string) => {
 			return tempDrugsArray.push({
 				//임시 배열에 값 저장
+				id: index,
 				entpName: ele.querySelector('entpName').textContent,
 				itemName: ele.querySelector('itemName').textContent,
 				itemSeq: ele.querySelector('itemSeq').textContent,

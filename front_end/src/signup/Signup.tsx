@@ -6,12 +6,18 @@ import { useState } from 'react';
 import { CgPill } from 'react-icons/cg';
 import SmileFace from '../common/images/smileFace.png';
 import { AiFillLock, AiOutlineUser } from 'react-icons/ai';
+import { useSelector } from 'react-redux';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
+import { RootState } from '../modules/redux';
 
 const Signup: React.FC = () => {
 	const [user, setUser] = useState<signup>({
 		userID: '',
 		userPW: '',
 	});
+
+	const backEndURL = useSelector((state: RootState) => state.webPath.backEndURL);
+	const navigator: NavigateFunction = useNavigate();
 
 	return (
 		<>
@@ -67,7 +73,7 @@ const Signup: React.FC = () => {
 							className="btn-signup"
 							onClick={(e) => {
 								e.preventDefault();
-								userSignup(user);
+								userSignup(user, navigator, backEndURL);
 							}}
 						>
 							회원가입
